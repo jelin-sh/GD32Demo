@@ -3,13 +3,17 @@
         {
             "name": "keil",
             "includePath": [
-                "c:\\Users\\skjsn\\WorkSpace\\MDK5\\GD32\\Demo1_GPIO\\.\\Application",
-                "c:\\Users\\skjsn\\WorkSpace\\MDK5\\GD32\\Demo1_GPIO\\.\\Core\\CMSIS",
-                "c:\\Users\\skjsn\\WorkSpace\\MDK5\\GD32\\Demo1_GPIO\\.\\Core",
-                "c:\\Users\\skjsn\\WorkSpace\\MDK5\\GD32\\Demo1_GPIO\\.\\Framework\\Include",
+                "c:\\Users\\skjsn\\WorkSpace\\MDK5\\GD32\\Demo\\.\\Application",
+                "c:\\Users\\skjsn\\WorkSpace\\MDK5\\GD32\\Demo\\.\\Application\\Demo1_GPIO",
+                "c:\\Users\\skjsn\\WorkSpace\\MDK5\\GD32\\Demo\\.\\Application\\Demo2_USART",
+                "c:\\Users\\skjsn\\WorkSpace\\MDK5\\GD32\\Demo\\.\\Core",
+                "c:\\Users\\skjsn\\WorkSpace\\MDK5\\GD32\\Demo\\.\\Core\\CMSIS",
+                "c:\\Users\\skjsn\\WorkSpace\\MDK5\\GD32\\Demo\\.\\FramewareLibrary\\Include",
+                "c:\\Users\\skjsn\\WorkSpace\\MDK5\\GD32\\Demo\\.\\Framework",
+                "c:\\Users\\skjsn\\WorkSpace\\MDK5\\GD32\\Demo\\.\\Framework\\GPIO",
+                "c:\\Users\\skjsn\\WorkSpace\\MDK5\\GD32\\Demo\\.\\Framework\\USART",
                 "C:\\Keil_v5\\ARM\\ARMCC\\include",
-                "c:\\Users\\skjsn\\WorkSpace\\MDK5\\GD32\\Demo1_GPIO\\.\\Application\\Demo1",
-                "c:\\Users\\skjsn\\WorkSpace\\MDK5\\GD32\\Demo1_GPIO\\.\\Framework\\Source"
+                "c:\\Users\\skjsn\\WorkSpace\\MDK5\\GD32\\Demo\\.\\FramewareLibrary\\Source"
             ],
             "defines": [
                 "__CC_ARM",
@@ -27,7 +31,7 @@
                 "__pure=",
                 "__value_in_regs=",
                 "USE_STDPERIPH_DRIVER",
-                "GD32F30x_HD"
+                "GD32F30X_CL"
             ],
             "intelliSenseMode": "${default}"
         }

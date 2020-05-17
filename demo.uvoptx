@@ -77,7 +77,7 @@
         <tvExpOptDlg>0</tvExpOptDlg>
         <IsCurrentTarget>1</IsCurrentTarget>
       </OPTFL>
-      <CpuCode>0</CpuCode>
+      <CpuCode>255</CpuCode>
       <DebugOpt>
         <uSim>0</uSim>
         <uTrg>1</uTrg>
@@ -103,7 +103,7 @@
         <bEvRecOn>1</bEvRecOn>
         <bSchkAxf>0</bSchkAxf>
         <bTchkAxf>0</bTchkAxf>
-        <nTsel>0</nTsel>
+        <nTsel>3</nTsel>
         <sDll></sDll>
         <sDllPa></sDllPa>
         <sDlgDll></sDlgDll>
@@ -114,16 +114,66 @@
         <tDlgDll></tDlgDll>
         <tDlgPa></tDlgPa>
         <tIfile></tIfile>
-        <pMon>BIN\UL2CM3.DLL</pMon>
+        <pMon>BIN\CMSIS_AGDI.dll</pMon>
       </DebugOpt>
       <TargetDriverDllRegistry>
         <SetRegEntry>
           <Number>0</Number>
+          <Key>CMSIS_AGDI</Key>
+          <Name>-X"Any" -UAny -O206 -S0 -C0 -P00000000 -N00("ARM CoreSight SW-DP") -D00(2BA01477) -L00(0) -TO65554 -TC10000000 -TT10000000 -TP20 -TDS8007 -TDT0 -TDC1F -TIEFFFFFFFF -TIP8 -FO15 -FD20000000 -FC1000 -FN1 -FF0GD32F30x_CL.FLM -FS08000000 -FL010000 -FP0($$Device:GD32F307VE$Flash\GD32F30x_CL.FLM)</Name>
+        </SetRegEntry>
+        <SetRegEntry>
+          <Number>0</Number>
           <Key>UL2CM3</Key>
-          <Name>UL2CM3(-S0 -C0 -P0 -FD20000000 -FC1000 -FN1 -FF0GD32F30x_HD -FS08000000 -FL010000 -FP0($$Device:GD32F303VE$Flash\GD32F30x_HD.FLM))</Name>
+          <Name>UL2CM3(-S0 -C0 -P0 )  -FN1 -FC1000 -FD20000000 -FF0GD32F30x_CL -FL010000 -FS08000000 -FP0($$Device:GD32F307VE$Flash\GD32F30x_CL.FLM)</Name>
+        </SetRegEntry>
+        <SetRegEntry>
+          <Number>0</Number>
+          <Key>ST-LINKIII-KEIL_SWO</Key>
+          <Name>UL2CM3(-S0 -C0 -P0 )  -FN1 -FC1000 -FD20000000 -FF0GD32F30x_CL -FL010000 -FS08000000 -FP0($$Device:GD32F307VE$Flash\GD32F30x_CL.FLM)</Name>
+        </SetRegEntry>
+        <SetRegEntry>
+          <Number>0</Number>
+          <Key>ARMRTXEVENTFLAGS</Key>
+          <Name>-L70 -Z18 -C0 -M0 -T1</Name>
+        </SetRegEntry>
+        <SetRegEntry>
+          <Number>0</Number>
+          <Key>DLGTARM</Key>
+          <Name>(1010=-1,-1,-1,-1,0)(1007=-1,-1,-1,-1,0)(1008=-1,-1,-1,-1,0)(1009=-1,-1,-1,-1,0)(1012=-1,-1,-1,-1,0)</Name>
+        </SetRegEntry>
+        <SetRegEntry>
+          <Number>0</Number>
+          <Key>ARMDBGFLAGS</Key>
+          <Name></Name>
+        </SetRegEntry>
+        <SetRegEntry>
+          <Number>0</Number>
+          <Key>DLGUARM</Key>
+          <Name></Name>
         </SetRegEntry>
       </TargetDriverDllRegistry>
       <Breakpoint/>
+      <WatchWindow1>
+        <Ww>
+          <count>0</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>usart0</ItemText>
+        </Ww>
+        <Ww>
+          <count>1</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>rxBuffer</ItemText>
+        </Ww>
+      </WatchWindow1>
+      <MemoryWindow1>
+        <Mm>
+          <WinNumber>1</WinNumber>
+          <SubType>0</SubType>
+          <ItemText>usart0</ItemText>
+          <AccSizeX>0</AccSizeX>
+        </Mm>
+      </MemoryWindow1>
       <Tracepoint>
         <THDelay>0</THDelay>
       </Tracepoint>
@@ -135,7 +185,7 @@
         <aSer1>0</aSer1>
         <aSer2>0</aSer2>
         <aPa>0</aPa>
-        <viewmode>0</viewmode>
+        <viewmode>1</viewmode>
         <vrSel>0</vrSel>
         <aSym>0</aSym>
         <aTbox>0</aTbox>
@@ -171,25 +221,13 @@
 
   <Group>
     <GroupName>Core</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
     <File>
       <GroupNumber>1</GroupNumber>
       <FileNumber>1</FileNumber>
-      <FileType>2</FileType>
-      <tvExp>0</tvExp>
-      <tvExpOptDlg>0</tvExpOptDlg>
-      <bDave2>0</bDave2>
-      <PathWithFileName>.\Core\CMSIS\startup_gd32f30x_hd.s</PathWithFileName>
-      <FilenameWithoutPath>startup_gd32f30x_hd.s</FilenameWithoutPath>
-      <RteFlg>0</RteFlg>
-      <bShared>0</bShared>
-    </File>
-    <File>
-      <GroupNumber>1</GroupNumber>
-      <FileNumber>2</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -201,7 +239,7 @@
     </File>
     <File>
       <GroupNumber>1</GroupNumber>
-      <FileNumber>3</FileNumber>
+      <FileNumber>2</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -213,7 +251,7 @@
     </File>
     <File>
       <GroupNumber>1</GroupNumber>
-      <FileNumber>4</FileNumber>
+      <FileNumber>3</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -225,13 +263,25 @@
     </File>
     <File>
       <GroupNumber>1</GroupNumber>
-      <FileNumber>5</FileNumber>
+      <FileNumber>4</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
       <PathWithFileName>.\Core\systick.c</PathWithFileName>
       <FilenameWithoutPath>systick.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>1</GroupNumber>
+      <FileNumber>5</FileNumber>
+      <FileType>2</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\Core\CMSIS\startup_gd32f30x_cl.s</PathWithFileName>
+      <FilenameWithoutPath>startup_gd32f30x_cl.s</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -255,26 +305,26 @@
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
-  </Group>
-
-  <Group>
-    <GroupName>Framework</GroupName>
-    <tvExp>0</tvExp>
-    <tvExpOptDlg>0</tvExpOptDlg>
-    <cbSel>0</cbSel>
-    <RteFlg>0</RteFlg>
     <File>
-      <GroupNumber>3</GroupNumber>
+      <GroupNumber>2</GroupNumber>
       <FileNumber>7</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\Framework\Source\gd32f30x_adc.c</PathWithFileName>
-      <FilenameWithoutPath>gd32f30x_adc.c</FilenameWithoutPath>
+      <PathWithFileName>.\Application\Demo2_USART\Demo2_USART.c</PathWithFileName>
+      <FilenameWithoutPath>Demo2_USART.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
+  </Group>
+
+  <Group>
+    <GroupName>Framework</GroupName>
+    <tvExp>1</tvExp>
+    <tvExpOptDlg>0</tvExpOptDlg>
+    <cbSel>0</cbSel>
+    <RteFlg>0</RteFlg>
     <File>
       <GroupNumber>3</GroupNumber>
       <FileNumber>8</FileNumber>
@@ -282,8 +332,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\Framework\Source\gd32f30x_bkp.c</PathWithFileName>
-      <FilenameWithoutPath>gd32f30x_bkp.c</FilenameWithoutPath>
+      <PathWithFileName>.\Framework\GPIO\Port.c</PathWithFileName>
+      <FilenameWithoutPath>Port.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -294,259 +344,303 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\Framework\Source\gd32f30x_can.c</PathWithFileName>
-      <FilenameWithoutPath>gd32f30x_can.c</FilenameWithoutPath>
+      <PathWithFileName>.\Framework\USART\usart.c</PathWithFileName>
+      <FilenameWithoutPath>usart.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
+  </Group>
+
+  <Group>
+    <GroupName>Frameware</GroupName>
+    <tvExp>1</tvExp>
+    <tvExpOptDlg>0</tvExpOptDlg>
+    <cbSel>0</cbSel>
+    <RteFlg>0</RteFlg>
     <File>
-      <GroupNumber>3</GroupNumber>
+      <GroupNumber>4</GroupNumber>
       <FileNumber>10</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\Framework\Source\gd32f30x_crc.c</PathWithFileName>
-      <FilenameWithoutPath>gd32f30x_crc.c</FilenameWithoutPath>
+      <PathWithFileName>.\FramewareLibrary\Source\gd32f30x_adc.c</PathWithFileName>
+      <FilenameWithoutPath>gd32f30x_adc.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
     <File>
-      <GroupNumber>3</GroupNumber>
+      <GroupNumber>4</GroupNumber>
       <FileNumber>11</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\Framework\Source\gd32f30x_ctc.c</PathWithFileName>
-      <FilenameWithoutPath>gd32f30x_ctc.c</FilenameWithoutPath>
+      <PathWithFileName>.\FramewareLibrary\Source\gd32f30x_bkp.c</PathWithFileName>
+      <FilenameWithoutPath>gd32f30x_bkp.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
     <File>
-      <GroupNumber>3</GroupNumber>
+      <GroupNumber>4</GroupNumber>
       <FileNumber>12</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\Framework\Source\gd32f30x_dac.c</PathWithFileName>
-      <FilenameWithoutPath>gd32f30x_dac.c</FilenameWithoutPath>
+      <PathWithFileName>.\FramewareLibrary\Source\gd32f30x_can.c</PathWithFileName>
+      <FilenameWithoutPath>gd32f30x_can.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
     <File>
-      <GroupNumber>3</GroupNumber>
+      <GroupNumber>4</GroupNumber>
       <FileNumber>13</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\Framework\Source\gd32f30x_dbg.c</PathWithFileName>
-      <FilenameWithoutPath>gd32f30x_dbg.c</FilenameWithoutPath>
+      <PathWithFileName>.\FramewareLibrary\Source\gd32f30x_crc.c</PathWithFileName>
+      <FilenameWithoutPath>gd32f30x_crc.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
     <File>
-      <GroupNumber>3</GroupNumber>
+      <GroupNumber>4</GroupNumber>
       <FileNumber>14</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\Framework\Source\gd32f30x_dma.c</PathWithFileName>
-      <FilenameWithoutPath>gd32f30x_dma.c</FilenameWithoutPath>
+      <PathWithFileName>.\FramewareLibrary\Source\gd32f30x_ctc.c</PathWithFileName>
+      <FilenameWithoutPath>gd32f30x_ctc.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
     <File>
-      <GroupNumber>3</GroupNumber>
+      <GroupNumber>4</GroupNumber>
       <FileNumber>15</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\Framework\Source\gd32f30x_enet.c</PathWithFileName>
-      <FilenameWithoutPath>gd32f30x_enet.c</FilenameWithoutPath>
+      <PathWithFileName>.\FramewareLibrary\Source\gd32f30x_dac.c</PathWithFileName>
+      <FilenameWithoutPath>gd32f30x_dac.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
     <File>
-      <GroupNumber>3</GroupNumber>
+      <GroupNumber>4</GroupNumber>
       <FileNumber>16</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\Framework\Source\gd32f30x_exmc.c</PathWithFileName>
-      <FilenameWithoutPath>gd32f30x_exmc.c</FilenameWithoutPath>
+      <PathWithFileName>.\FramewareLibrary\Source\gd32f30x_dbg.c</PathWithFileName>
+      <FilenameWithoutPath>gd32f30x_dbg.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
     <File>
-      <GroupNumber>3</GroupNumber>
+      <GroupNumber>4</GroupNumber>
       <FileNumber>17</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\Framework\Source\gd32f30x_exti.c</PathWithFileName>
-      <FilenameWithoutPath>gd32f30x_exti.c</FilenameWithoutPath>
+      <PathWithFileName>.\FramewareLibrary\Source\gd32f30x_dma.c</PathWithFileName>
+      <FilenameWithoutPath>gd32f30x_dma.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
     <File>
-      <GroupNumber>3</GroupNumber>
+      <GroupNumber>4</GroupNumber>
       <FileNumber>18</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\Framework\Source\gd32f30x_fmc.c</PathWithFileName>
-      <FilenameWithoutPath>gd32f30x_fmc.c</FilenameWithoutPath>
+      <PathWithFileName>.\FramewareLibrary\Source\gd32f30x_enet.c</PathWithFileName>
+      <FilenameWithoutPath>gd32f30x_enet.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
     <File>
-      <GroupNumber>3</GroupNumber>
+      <GroupNumber>4</GroupNumber>
       <FileNumber>19</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\Framework\Source\gd32f30x_fwdgt.c</PathWithFileName>
-      <FilenameWithoutPath>gd32f30x_fwdgt.c</FilenameWithoutPath>
+      <PathWithFileName>.\FramewareLibrary\Source\gd32f30x_exmc.c</PathWithFileName>
+      <FilenameWithoutPath>gd32f30x_exmc.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
     <File>
-      <GroupNumber>3</GroupNumber>
+      <GroupNumber>4</GroupNumber>
       <FileNumber>20</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\Framework\Source\gd32f30x_gpio.c</PathWithFileName>
-      <FilenameWithoutPath>gd32f30x_gpio.c</FilenameWithoutPath>
+      <PathWithFileName>.\FramewareLibrary\Source\gd32f30x_exti.c</PathWithFileName>
+      <FilenameWithoutPath>gd32f30x_exti.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
     <File>
-      <GroupNumber>3</GroupNumber>
+      <GroupNumber>4</GroupNumber>
       <FileNumber>21</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\Framework\Source\gd32f30x_i2c.c</PathWithFileName>
-      <FilenameWithoutPath>gd32f30x_i2c.c</FilenameWithoutPath>
+      <PathWithFileName>.\FramewareLibrary\Source\gd32f30x_fmc.c</PathWithFileName>
+      <FilenameWithoutPath>gd32f30x_fmc.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
     <File>
-      <GroupNumber>3</GroupNumber>
+      <GroupNumber>4</GroupNumber>
       <FileNumber>22</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\Framework\Source\gd32f30x_misc.c</PathWithFileName>
-      <FilenameWithoutPath>gd32f30x_misc.c</FilenameWithoutPath>
+      <PathWithFileName>.\FramewareLibrary\Source\gd32f30x_fwdgt.c</PathWithFileName>
+      <FilenameWithoutPath>gd32f30x_fwdgt.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
     <File>
-      <GroupNumber>3</GroupNumber>
+      <GroupNumber>4</GroupNumber>
       <FileNumber>23</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\Framework\Source\gd32f30x_pmu.c</PathWithFileName>
-      <FilenameWithoutPath>gd32f30x_pmu.c</FilenameWithoutPath>
+      <PathWithFileName>.\FramewareLibrary\Source\gd32f30x_gpio.c</PathWithFileName>
+      <FilenameWithoutPath>gd32f30x_gpio.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
     <File>
-      <GroupNumber>3</GroupNumber>
+      <GroupNumber>4</GroupNumber>
       <FileNumber>24</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\Framework\Source\gd32f30x_rcu.c</PathWithFileName>
-      <FilenameWithoutPath>gd32f30x_rcu.c</FilenameWithoutPath>
+      <PathWithFileName>.\FramewareLibrary\Source\gd32f30x_i2c.c</PathWithFileName>
+      <FilenameWithoutPath>gd32f30x_i2c.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
     <File>
-      <GroupNumber>3</GroupNumber>
+      <GroupNumber>4</GroupNumber>
       <FileNumber>25</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\Framework\Source\gd32f30x_rtc.c</PathWithFileName>
-      <FilenameWithoutPath>gd32f30x_rtc.c</FilenameWithoutPath>
+      <PathWithFileName>.\FramewareLibrary\Source\gd32f30x_misc.c</PathWithFileName>
+      <FilenameWithoutPath>gd32f30x_misc.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
     <File>
-      <GroupNumber>3</GroupNumber>
+      <GroupNumber>4</GroupNumber>
       <FileNumber>26</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\Framework\Source\gd32f30x_sdio.c</PathWithFileName>
-      <FilenameWithoutPath>gd32f30x_sdio.c</FilenameWithoutPath>
+      <PathWithFileName>.\FramewareLibrary\Source\gd32f30x_pmu.c</PathWithFileName>
+      <FilenameWithoutPath>gd32f30x_pmu.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
     <File>
-      <GroupNumber>3</GroupNumber>
+      <GroupNumber>4</GroupNumber>
       <FileNumber>27</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\Framework\Source\gd32f30x_spi.c</PathWithFileName>
-      <FilenameWithoutPath>gd32f30x_spi.c</FilenameWithoutPath>
+      <PathWithFileName>.\FramewareLibrary\Source\gd32f30x_rcu.c</PathWithFileName>
+      <FilenameWithoutPath>gd32f30x_rcu.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
     <File>
-      <GroupNumber>3</GroupNumber>
+      <GroupNumber>4</GroupNumber>
       <FileNumber>28</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\Framework\Source\gd32f30x_timer.c</PathWithFileName>
-      <FilenameWithoutPath>gd32f30x_timer.c</FilenameWithoutPath>
+      <PathWithFileName>.\FramewareLibrary\Source\gd32f30x_rtc.c</PathWithFileName>
+      <FilenameWithoutPath>gd32f30x_rtc.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
     <File>
-      <GroupNumber>3</GroupNumber>
+      <GroupNumber>4</GroupNumber>
       <FileNumber>29</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\Framework\Source\gd32f30x_usart.c</PathWithFileName>
-      <FilenameWithoutPath>gd32f30x_usart.c</FilenameWithoutPath>
+      <PathWithFileName>.\FramewareLibrary\Source\gd32f30x_sdio.c</PathWithFileName>
+      <FilenameWithoutPath>gd32f30x_sdio.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
     <File>
-      <GroupNumber>3</GroupNumber>
+      <GroupNumber>4</GroupNumber>
       <FileNumber>30</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\Framework\Source\gd32f30x_wwdgt.c</PathWithFileName>
+      <PathWithFileName>.\FramewareLibrary\Source\gd32f30x_spi.c</PathWithFileName>
+      <FilenameWithoutPath>gd32f30x_spi.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>4</GroupNumber>
+      <FileNumber>31</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\FramewareLibrary\Source\gd32f30x_timer.c</PathWithFileName>
+      <FilenameWithoutPath>gd32f30x_timer.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>4</GroupNumber>
+      <FileNumber>32</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\FramewareLibrary\Source\gd32f30x_usart.c</PathWithFileName>
+      <FilenameWithoutPath>gd32f30x_usart.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>4</GroupNumber>
+      <FileNumber>33</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\FramewareLibrary\Source\gd32f30x_wwdgt.c</PathWithFileName>
       <FilenameWithoutPath>gd32f30x_wwdgt.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>

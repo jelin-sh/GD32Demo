@@ -14,16 +14,16 @@
       <uAC6>0</uAC6>
       <TargetOption>
         <TargetCommonOption>
-          <Device>GD32F303VE</Device>
+          <Device>GD32F307VE</Device>
           <Vendor>GigaDevice</Vendor>
           <PackID>GigaDevice.GD32F30x_DFP.1.0.3</PackID>
           <PackURL>http://gd32mcu.21ic.com/data/documents/yingyongruanjian/</PackURL>
-          <Cpu>IRAM(0x20000000,0x010000) IROM(0x08000000,0x080000) CPUTYPE("Cortex-M4") FPU2 CLOCK(12000000) ELITTLE</Cpu>
+          <Cpu>IRAM(0x20000000,0x018000) IROM(0x08000000,0x080000) CPUTYPE("Cortex-M4") FPU2 CLOCK(12000000) ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile></StartupFile>
-          <FlashDriverDll>UL2CM3(-S0 -C0 -P0 -FD20000000 -FC1000 -FN1 -FF0GD32F30x_HD -FS08000000 -FL010000 -FP0($$Device:GD32F303VE$Flash\GD32F30x_HD.FLM))</FlashDriverDll>
+          <FlashDriverDll>UL2CM3(-S0 -C0 -P0 -FD20000000 -FC1000 -FN1 -FF0GD32F30x_CL -FS08000000 -FL010000 -FP0($$Device:GD32F307VE$Flash\GD32F30x_CL.FLM))</FlashDriverDll>
           <DeviceId>0</DeviceId>
-          <RegisterFile>$$Device:GD32F303VE$Device\Include\gd32f30x.h</RegisterFile>
+          <RegisterFile>$$Device:GD32F307VE$Device\Include\gd32f30x.h</RegisterFile>
           <MemoryEnv></MemoryEnv>
           <Cmp></Cmp>
           <Asm></Asm>
@@ -33,7 +33,7 @@
           <SLE66CMisc></SLE66CMisc>
           <SLE66AMisc></SLE66AMisc>
           <SLE66LinkerMisc></SLE66LinkerMisc>
-          <SFDFile>$$Device:GD32F303VE$SVD\GD32F30x_HD.svd</SFDFile>
+          <SFDFile>$$Device:GD32F307VE$SVD\GD32F30x_CL.svd</SFDFile>
           <bCustSvd>0</bCustSvd>
           <UseEnv>0</UseEnv>
           <BinPath></BinPath>
@@ -245,7 +245,7 @@
               <IRAM>
                 <Type>0</Type>
                 <StartAddress>0x20000000</StartAddress>
-                <Size>0x10000</Size>
+                <Size>0x18000</Size>
               </IRAM>
               <IROM>
                 <Type>1</Type>
@@ -300,7 +300,7 @@
               <OCR_RVCT9>
                 <Type>0</Type>
                 <StartAddress>0x20000000</StartAddress>
-                <Size>0x10000</Size>
+                <Size>0x18000</Size>
               </OCR_RVCT9>
               <OCR_RVCT10>
                 <Type>0</Type>
@@ -336,9 +336,9 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>USE_STDPERIPH_DRIVER,GD32F30x_HD</Define>
+              <Define>USE_STDPERIPH_DRIVER,GD32F30X_CL</Define>
               <Undefine></Undefine>
-              <IncludePath>.\Application;.\Application\Demo1_GPIO;.\Core;.\Core\CMSIS;.\Framework\Include</IncludePath>
+              <IncludePath>.\Application;.\Application\Demo1_GPIO;.\Application\Demo2_USART;.\Core;.\Core\CMSIS;.\FramewareLibrary\Include;.\Framework;.\Framework\GPIO;.\Framework\USART</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -383,11 +383,6 @@
           <GroupName>Core</GroupName>
           <Files>
             <File>
-              <FileName>startup_gd32f30x_hd.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\Core\CMSIS\startup_gd32f30x_hd.s</FilePath>
-            </File>
-            <File>
               <FileName>system_gd32f30x.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Core\CMSIS\system_gd32f30x.c</FilePath>
@@ -407,6 +402,11 @@
               <FileType>1</FileType>
               <FilePath>.\Core\systick.c</FilePath>
             </File>
+            <File>
+              <FileName>startup_gd32f30x_cl.s</FileName>
+              <FileType>2</FileType>
+              <FilePath>.\Core\CMSIS\startup_gd32f30x_cl.s</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -417,130 +417,150 @@
               <FileType>1</FileType>
               <FilePath>.\Application\Demo1_GPIO\demo1_GPIO.c</FilePath>
             </File>
+            <File>
+              <FileName>Demo2_USART.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Application\Demo2_USART\Demo2_USART.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
           <GroupName>Framework</GroupName>
           <Files>
             <File>
+              <FileName>Port.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Framework\GPIO\Port.c</FilePath>
+            </File>
+            <File>
+              <FileName>usart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Framework\USART\usart.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Frameware</GroupName>
+          <Files>
+            <File>
               <FileName>gd32f30x_adc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Framework\Source\gd32f30x_adc.c</FilePath>
+              <FilePath>.\FramewareLibrary\Source\gd32f30x_adc.c</FilePath>
             </File>
             <File>
               <FileName>gd32f30x_bkp.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Framework\Source\gd32f30x_bkp.c</FilePath>
+              <FilePath>.\FramewareLibrary\Source\gd32f30x_bkp.c</FilePath>
             </File>
             <File>
               <FileName>gd32f30x_can.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Framework\Source\gd32f30x_can.c</FilePath>
+              <FilePath>.\FramewareLibrary\Source\gd32f30x_can.c</FilePath>
             </File>
             <File>
               <FileName>gd32f30x_crc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Framework\Source\gd32f30x_crc.c</FilePath>
+              <FilePath>.\FramewareLibrary\Source\gd32f30x_crc.c</FilePath>
             </File>
             <File>
               <FileName>gd32f30x_ctc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Framework\Source\gd32f30x_ctc.c</FilePath>
+              <FilePath>.\FramewareLibrary\Source\gd32f30x_ctc.c</FilePath>
             </File>
             <File>
               <FileName>gd32f30x_dac.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Framework\Source\gd32f30x_dac.c</FilePath>
+              <FilePath>.\FramewareLibrary\Source\gd32f30x_dac.c</FilePath>
             </File>
             <File>
               <FileName>gd32f30x_dbg.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Framework\Source\gd32f30x_dbg.c</FilePath>
+              <FilePath>.\FramewareLibrary\Source\gd32f30x_dbg.c</FilePath>
             </File>
             <File>
               <FileName>gd32f30x_dma.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Framework\Source\gd32f30x_dma.c</FilePath>
+              <FilePath>.\FramewareLibrary\Source\gd32f30x_dma.c</FilePath>
             </File>
             <File>
               <FileName>gd32f30x_enet.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Framework\Source\gd32f30x_enet.c</FilePath>
+              <FilePath>.\FramewareLibrary\Source\gd32f30x_enet.c</FilePath>
             </File>
             <File>
               <FileName>gd32f30x_exmc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Framework\Source\gd32f30x_exmc.c</FilePath>
+              <FilePath>.\FramewareLibrary\Source\gd32f30x_exmc.c</FilePath>
             </File>
             <File>
               <FileName>gd32f30x_exti.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Framework\Source\gd32f30x_exti.c</FilePath>
+              <FilePath>.\FramewareLibrary\Source\gd32f30x_exti.c</FilePath>
             </File>
             <File>
               <FileName>gd32f30x_fmc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Framework\Source\gd32f30x_fmc.c</FilePath>
+              <FilePath>.\FramewareLibrary\Source\gd32f30x_fmc.c</FilePath>
             </File>
             <File>
               <FileName>gd32f30x_fwdgt.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Framework\Source\gd32f30x_fwdgt.c</FilePath>
+              <FilePath>.\FramewareLibrary\Source\gd32f30x_fwdgt.c</FilePath>
             </File>
             <File>
               <FileName>gd32f30x_gpio.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Framework\Source\gd32f30x_gpio.c</FilePath>
+              <FilePath>.\FramewareLibrary\Source\gd32f30x_gpio.c</FilePath>
             </File>
             <File>
               <FileName>gd32f30x_i2c.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Framework\Source\gd32f30x_i2c.c</FilePath>
+              <FilePath>.\FramewareLibrary\Source\gd32f30x_i2c.c</FilePath>
             </File>
             <File>
               <FileName>gd32f30x_misc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Framework\Source\gd32f30x_misc.c</FilePath>
+              <FilePath>.\FramewareLibrary\Source\gd32f30x_misc.c</FilePath>
             </File>
             <File>
               <FileName>gd32f30x_pmu.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Framework\Source\gd32f30x_pmu.c</FilePath>
+              <FilePath>.\FramewareLibrary\Source\gd32f30x_pmu.c</FilePath>
             </File>
             <File>
               <FileName>gd32f30x_rcu.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Framework\Source\gd32f30x_rcu.c</FilePath>
+              <FilePath>.\FramewareLibrary\Source\gd32f30x_rcu.c</FilePath>
             </File>
             <File>
               <FileName>gd32f30x_rtc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Framework\Source\gd32f30x_rtc.c</FilePath>
+              <FilePath>.\FramewareLibrary\Source\gd32f30x_rtc.c</FilePath>
             </File>
             <File>
               <FileName>gd32f30x_sdio.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Framework\Source\gd32f30x_sdio.c</FilePath>
+              <FilePath>.\FramewareLibrary\Source\gd32f30x_sdio.c</FilePath>
             </File>
             <File>
               <FileName>gd32f30x_spi.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Framework\Source\gd32f30x_spi.c</FilePath>
+              <FilePath>.\FramewareLibrary\Source\gd32f30x_spi.c</FilePath>
             </File>
             <File>
               <FileName>gd32f30x_timer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Framework\Source\gd32f30x_timer.c</FilePath>
+              <FilePath>.\FramewareLibrary\Source\gd32f30x_timer.c</FilePath>
             </File>
             <File>
               <FileName>gd32f30x_usart.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Framework\Source\gd32f30x_usart.c</FilePath>
+              <FilePath>.\FramewareLibrary\Source\gd32f30x_usart.c</FilePath>
             </File>
             <File>
               <FileName>gd32f30x_wwdgt.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Framework\Source\gd32f30x_wwdgt.c</FilePath>
+              <FilePath>.\FramewareLibrary\Source\gd32f30x_wwdgt.c</FilePath>
             </File>
           </Files>
         </Group>
