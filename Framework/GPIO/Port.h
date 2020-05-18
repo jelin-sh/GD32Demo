@@ -15,6 +15,7 @@ struct Port {
   GPIO_Speed speed;
   GPIO_Port port;
   void (*Write)(struct Port*, bool);
+  bool (*Read)(struct Port*);
   void (*Logout)(struct Port*);
 };
 

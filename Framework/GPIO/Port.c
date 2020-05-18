@@ -1,4 +1,5 @@
 #include "Port.h"
+
 #include "stdlib.h"
 
 void GPIO_Port_Write(struct Port* this, bool val) {
@@ -7,6 +8,10 @@ void GPIO_Port_Write(struct Port* this, bool val) {
   } else {
     gpio_bit_reset(this->port, this->pin);
   }
+}
+
+bool GPIO_Port_Read(struct Port* this) {
+  return gpio_input_bit_get(this->port, this->pin);
 }
 
 void GPIO_Port_Logout(struct Port* this) {
@@ -21,6 +26,7 @@ struct Port* Port_Register(GPIO_Port port,
   struct Port* res = calloc(1, sizeof(struct Port));
   res->Write = GPIO_Port_Write;
   res->Logout = GPIO_Port_Logout;
+  res->Read = GPIO_Port_Read;
 
   res->mode = mode;
   res->pin = pin;

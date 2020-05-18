@@ -6,6 +6,7 @@
 ".\objects\startup_gd32f30x_cl.o"
 ".\objects\demo1_gpio.o"
 ".\objects\demo2_usart.o"
+".\objects\demo4_wwdg.o"
 ".\objects\port.o"
 ".\objects\usart.o"
 ".\objects\gd32f30x_adc.o"

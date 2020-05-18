@@ -5,3 +5,9 @@
 ## GD32学习笔记
 
 [1.GPIO](./Application/Demo1_GPIO/GPIO学习笔记.md) ----更新日期：2020年5月17日
+
+2.USART  ----后期补充
+
+[3.时钟](./Application/Demo3_RCU/RCU学习笔记.md) ----更新日期：2020年5月18日
+
+4.WWDG  ----后期补充

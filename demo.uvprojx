@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER,GD32F30X_CL</Define>
               <Undefine></Undefine>
-              <IncludePath>.\Application;.\Application\Demo1_GPIO;.\Application\Demo2_USART;.\Core;.\Core\CMSIS;.\FramewareLibrary\Include;.\Framework;.\Framework\GPIO;.\Framework\USART</IncludePath>
+              <IncludePath>.\Application;.\Application\Demo1_GPIO;.\Application\Demo2_USART;.\Core;.\Core\CMSIS;.\FramewareLibrary\Include;.\Framework;.\Framework\GPIO;.\Framework\USART;.\Application\Demo4_WWDG</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -421,6 +421,11 @@
               <FileName>Demo2_USART.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Application\Demo2_USART\Demo2_USART.c</FilePath>
+            </File>
+            <File>
+              <FileName>Demo4_WWDG.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Application\Demo4_WWDG\Demo4_WWDG.c</FilePath>
             </File>
           </Files>
         </Group>

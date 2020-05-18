@@ -12,6 +12,7 @@
                 "c:\\Users\\skjsn\\WorkSpace\\MDK5\\GD32\\Demo\\.\\Framework",
                 "c:\\Users\\skjsn\\WorkSpace\\MDK5\\GD32\\Demo\\.\\Framework\\GPIO",
                 "c:\\Users\\skjsn\\WorkSpace\\MDK5\\GD32\\Demo\\.\\Framework\\USART",
+                "c:\\Users\\skjsn\\WorkSpace\\MDK5\\GD32\\Demo\\.\\Application\\Demo4_WWDG",
                 "C:\\Keil_v5\\ARM\\ARMCC\\include",
                 "c:\\Users\\skjsn\\WorkSpace\\MDK5\\GD32\\Demo\\.\\FramewareLibrary\\Source"
             ],
